@@ -81,7 +81,7 @@ const dropClaw = () => {
       if (grabbedGift.type === "blueberry") {
         setPopupMessage("You caught a Blueberry!");
       } else if (grabbedGift.type === "helldiva") {
-        setPopupMessage("You caught a Hell Diva!");
+        setPopupMessage("You caught a Cadet!");
       } else {
         setPopupMessage("You caught a Gift!");
       }
@@ -124,7 +124,7 @@ if (currentPage === "blueberry") {
       <button
         onClick={() => setCurrentPage("game")}
       >
-        Back to Machine
+        catch another
       </button>
     </div>
   );
