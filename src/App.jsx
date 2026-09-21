@@ -1,6 +1,8 @@
 import { useState } from "react";
 
 import "./App.css";
+import OpeningPage from "./OpeningPage";
+import FrontPage from "./FrontPage";
 
 import giftImg from "./assets/gift1.png";
 import giftImg2 from "./assets/gift2.png";
@@ -15,7 +17,8 @@ export default function App() {
   const [popupMessage, setPopupMessage] = useState("");
   const [currentPage, setCurrentPage] = useState("game");
   const [caughtGift, setCaughtGift] = useState(null);
-  
+  const [showOpening, setShowOpening] = useState(true);
+  const [unlocked, setUnlocked] = useState(false);
 
   const generateGifts = () => {
     const gifts = [];
@@ -110,6 +113,32 @@ const dropClaw = () => {
     setGifts(generateGifts());
   };
 
+if (showOpening) {
+  return (
+    <OpeningPage
+      onYes={() => setShowOpening(false)}
+    />
+  );
+}
+
+if (!unlocked) {
+  return (
+    <FrontPage
+      onUnlock={() => setUnlocked(true)}
+    />
+  );
+}
+
+if (!unlocked) {
+  return (
+    <FrontPage
+      onUnlock={() => {
+        setUnlocked(true);
+      }}
+    />
+  );
+}
+
 if (currentPage === "blueberry") {
   return (
     <div className="app">
@@ -122,12 +151,13 @@ if (currentPage === "blueberry") {
       />
 
       <button
-        onClick={() => setCurrentPage("game")}
-      >
-        catch another
+  className="prize-btn"
+  onClick={() => setCurrentPage("game")}
+>
+        Extract Another!
       </button>
     </div>
-  );
+  );    
 }
 
 if (currentPage === "helldiva") {
@@ -142,12 +172,13 @@ if (currentPage === "helldiva") {
       />
 
       <button
-        onClick={() => setCurrentPage("game")}
-      >
-        Back to Machine
-      </button>
-    </div>
-  );
+  className="prize-btn"
+  onClick={() => setCurrentPage("game")}
+>
+  Extract Another!
+</button>
+</div>
+);
 }
 
 return (

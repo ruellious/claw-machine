@@ -7,6 +7,11 @@
 body {
   background: #4f4e4e;
   font-family: sans-serif;
+
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
 }
 
 .app {
@@ -24,8 +29,8 @@ body {
 }
 
 .machine {
-  width: 600px;
-  height: 750px;
+  width: min(600px, 95vw);
+  aspect-ratio: 600 / 750;
 
   position: relative;
   overflow: hidden;
@@ -36,7 +41,7 @@ body {
 }
 
 .claw {
-  width: 200px;
+  width: 160px;
 
   position: absolute;
 
@@ -96,6 +101,28 @@ body {
 .buttons-art {
   margin-top: 20px;
   width: 300px;
+}
+
+.prize-btn {
+  padding: 15px 30px;
+  background: #fae662;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  border: 4px solid #4f4e4e;
+  border-radius: 16px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 #4f4e4e;
+  margin-top: 20px;
+}
+
+.prize-btn:hover {
+  transform: scale(1.05);
+}
+
+.prize-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #fae662;
 }
 
 .popup {
