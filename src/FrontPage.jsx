@@ -5,7 +5,10 @@ export default function FrontPage({ onUnlock }) {
   const [error, setError] = useState("");
 
   const handleEnter = () => {
-    if (date === "2005-10-13") {
+    if (
+      date === "2005-10-13" ||
+      date === "2026-10-13"
+    ) {
       onUnlock();
     } else {
       setError("Wrong date </3");
@@ -31,8 +34,9 @@ export default function FrontPage({ onUnlock }) {
           width: "350px",
         }}
       >
-        <h1>YAY! you have gain access to the secret entrance</h1>
-        <p> ⊹₊˚‧︵‿₊⊱·✶·⊰₊‿︵‧˚₊⊹ </p>
+        <h1>YAY! you have gained access to the secret entrance</h1>
+
+        <p>⊹₊˚‧︵‿₊⊱·✶·⊰₊‿︵‧˚₊⊹</p>
 
         <p>Select the special date, birthday boy!</p>
 
