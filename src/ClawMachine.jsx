@@ -7,6 +7,7 @@ import clawImg from "./assets/claw.png";
 import machineImg from "./assets/machine.png";
 import BlueberryPage from "./Blueberry";
 import HellDivaPage from "./Cadet";
+import Confetti from "react-confetti";
 
 export default function ClawMachine() {
   const [clawX, setClawX] = useState(50);
@@ -16,6 +17,7 @@ export default function ClawMachine() {
   const [popupMessage, setPopupMessage] = useState("");
   const [currentPage, setCurrentPage] = useState("game");
   const [caughtGift, setCaughtGift] = useState(null);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   const generateGifts = () => {
     const gifts = [];
@@ -62,42 +64,50 @@ export default function ClawMachine() {
     setClawX((prev) => Math.min(90, prev + 10));
   };
 
-  const dropClaw = () => {
-    if (isDropping || gifts.length === 0) return;
+const dropClaw = () => {
+  if (isDropping || gifts.length === 0) return;
 
-    setIsDropping(true);
-    setClawY(320);
+  setIsDropping(true);
+  setClawY(320);
 
-    setTimeout(() => {
-      const clawPixelX = 70 + (clawX / 100) * 450;
+  setTimeout(() => {
+    const clawPixelX = 70 + (clawX / 100) * 450;
 
-      const grabbedGift = gifts.find(
-        (gift) => Math.abs(gift.x + 45 - clawPixelX) < 50
-      );
+    const grabbedGift = gifts.find(
+      (gift) => Math.abs(gift.x + 45 - clawPixelX) < 50
+    );
 
-      if (grabbedGift) {
-        setCaughtGift(grabbedGift);
+    if (grabbedGift) {
+      setCaughtGift(grabbedGift);
 
-        if (grabbedGift.type === "blueberry") {
-          setPopupMessage("You hired a Blueberry!");
-        } else if (grabbedGift.type === "helldiva") {
-          setPopupMessage("You hired a Cadet!");
-        }
-
-        setGifts((prev) =>
-          prev.filter((gift) => gift.id !== grabbedGift.id)
-        );
-
-        setScore((prev) => prev + 1);
-      }
-
-      setClawY(110);
+      setShowConfetti(true);
 
       setTimeout(() => {
-        setIsDropping(false);
-      }, 800);
-    }, 1200);
-  };
+        setShowConfetti(false);
+      }, 3000);
+
+      if (grabbedGift.type === "blueberry") {
+        setPopupMessage("You hired a Blueberry!");
+      } else if (grabbedGift.type === "helldiva") {
+        setPopupMessage("You hired a Cadet!");
+      } else {
+        setPopupMessage("You hired a Gift!");
+      }
+
+      setGifts((prev) =>
+        prev.filter((gift) => gift.id !== grabbedGift.id)
+      );
+
+      setScore((prev) => prev + 1);
+    }
+
+    setClawY(110);
+
+    setTimeout(() => {
+      setIsDropping(false);
+    }, 800);
+  }, 1200);
+};
 
   const resetGame = () => {
     setScore(0);
@@ -124,7 +134,16 @@ if (currentPage === "helldiva") {
   );
 }
 
-  return (
+return (
+  <>
+    {showConfetti && (
+      <Confetti
+        recycle={false}
+        numberOfPieces={5000}
+        gravity={0.5}
+      />
+    )}
+
     <div className="app">
       <h1>Claw Machine</h1>
 
@@ -203,5 +222,6 @@ if (currentPage === "helldiva") {
         </button>
       </div>
     </div>
-  );
+  </>
+);
 }
