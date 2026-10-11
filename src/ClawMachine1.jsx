@@ -84,7 +84,7 @@ const dropClaw = () => {
 
       setTimeout(() => {
         setShowConfetti(false);
-      }, 3000);
+      }, 5000);
 
       if (grabbedGift.type === "blueberry") {
         setPopupMessage("You hired a Blueberry!");
@@ -139,7 +139,7 @@ return (
     {showConfetti && (
       <Confetti
         recycle={false}
-        numberOfPieces={5000}
+        numberOfPieces={1000}
         gravity={0.5}
       />
     )}
