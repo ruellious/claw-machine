@@ -139,8 +139,8 @@ return (
     {showConfetti && (
       <Confetti
         recycle={false}
-        numberOfPieces={400}
-        gravity={0.2}
+        numberOfPieces={5000}
+        gravity={0.5}
       />
     )}
 
