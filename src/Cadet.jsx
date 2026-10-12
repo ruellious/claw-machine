@@ -92,7 +92,7 @@ export default function HellDivaPage({ onBack }) {
           </p>
 
           <p>
-            Happy birthday, baby. Thank you for being here,
+            Happy birthday, bebe. Thank you for being here,
             for being yourself, and for giving me the privilege
             of loving you. I hope that when you look back on
             this year, you'll find so many things worth
@@ -131,7 +131,7 @@ export default function HellDivaPage({ onBack }) {
           className="letter-footer"
           style={{ margin: "8px 0 0", textAlign: "center", lineHeight: 1.4 }}
         >
-          cie sudah legal jadi alcoholic
+          Cie sudah legal jadi alcoholic
         </p>
       </article>
     </main>

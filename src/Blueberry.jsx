@@ -34,77 +34,62 @@ export default function BlueberryPage({ onBack }) {
           To my bebebebebe,
         </p>
 
-        <div className="letter-content">
-          <p>
-            Happy birthday, my lovely honey pretty beautiful gorgeous love.
-          </p>
+        
+<div className="letter-content">
+  <p>
+    Sometimes I want to tell you how much I love you, and
+    then I realize I have absolutely no idea how to put it
+    into words without sounding like a complete sap. So
+    here's me trying anyway. I love you, bebeee. A lot.
+  </p>
 
-          <p>
-            Today is all about you, and I hope you allow yourself
-            to be celebrated as much as you deserve. I hope this
-            new chapter of your life brings you happiness in places
-            you least expect, opportunities that bring you closer
-            to your dreams, and little moments that remind you how
-            beautiful life can be.
-          </p>
+  <p>
+    I love all the little things about you, even the ones
+    you probably don't think twice about. The way you talk,
+    the things that make you laugh, your random thoughts,
+    and all the silly little brainrots that make you, well,
+    you. I love getting to know you, and I hope I get to
+    keep doing that for a really, really long time.
+  </p>
 
-          <p>
-            I wish I could put into words just how happy I am that
-            you exist. Out of all the people in this world, somehow,
-            our paths crossed, and I got the chance to know you,
-            to hear your thoughts, to laugh with you, and to love
-            you. I will always be grateful that I get to be a part
-            of your life.
-          </p>
+  <p>
+    And hey, you don't have to be perfect around me, okay?
+    You can have bad days, be tired, be grumpy, or have no
+    idea what you're doing with your life sometimes. You
+    don't have to pretend you're fine all the time. please 
+    complain about things as much as i do to you. I love
+    you as you are, not just when you're happy or when
+    everything is going right.
+  </p>
 
-          <p>
-            I hope you know how proud I am of you. Not just for
-            the things you accomplish, but for the person you are.
-            For every little step you take, every difficult day
-            you get through, and every time you keep trying even
-            when things aren't easy. You don't have to achieve
-            something extraordinary every day to be worth
-            celebrating. Simply being you is already enough.
-          </p>
+  <p>
+    I love spending time with you, even when we're not
+    doing anything particularly exciting. Just talking,
+    laughing at stupid reels, or even just doom scrolling
+    while keeping each other company and kisseseses
+    Somehow, even the most meh moments feel special
+    when they're with you.
+  </p>
 
-          <p>
-            I hope this year is kinder to you. I hope you find
-            more reasons to smile, experience things that make
-            you genuinely happy, and get closer to everything
-            you've been hoping for. I hope you learn to be gentle
-            with yourself, too, because you deserve the same
-            patience and understanding you give to the people
-            you care about (me :p).
-          </p>
+  <p>
+    I want more of that with you. More silly conversations,
+    more food to eat, more food to cook :p.
+  </p>
 
-          <p>
-            If I could give you anything for your birthday, it
-            would be the ability to see yourself through my eyes.
-            Maybe then you'd understand all the little things
-            about you that make me smile, all the reasons I
-            admire you, and all the ways you've made my life
-            better just by being in it.
-          </p>
+  <p>
+    Thank you for staying. Thank you for being alive. 
+    Youre the one thing that keep me sane, cipi. Words
+    cant explain how much i love love you.
+  </p>
 
-          <p>
-            But since I can't exactly wrap that up in a box,
-            I'll have to settle for telling you instead.
-          </p>
-
-          <p>
-            Happy birthday, baby. Thank you for being here,
-            for being yourself, and for giving me the privilege
-            of loving you. I hope that when you look back on
-            this year, you'll find so many things worth
-            remembering and so many reasons to be proud
-            of the person you've become.
-          </p>
-
-          <p>
-            Here's to another year of you, and hopefully,
-            another year of us.
-          </p>
-        </div>
+  <p>
+    I love you on your best days, your
+    worst days, and all those boring little in-between
+    days, too. I'm really happy I get to call you mine,
+    and I'm excited for all the things we haven't done
+    together yet.
+  </p>
+</div>
 
         <p
           className="letter-signoff"
@@ -131,7 +116,7 @@ export default function BlueberryPage({ onBack }) {
           className="letter-footer"
           style={{ margin: "8px 0 0", textAlign: "center", lineHeight: 1.4 }}
         >
-          cie sudah legal jadi alcoholic
+          UNCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC
         </p>
       </article>
     </main>
